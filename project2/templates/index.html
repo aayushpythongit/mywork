@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+<body>
+    <h1>The Somali Land Of Glory!</h1>
+    <p>Can we believe the sophisticated physics of the world that dyanmises us into more matured and sensible individuals! Do you think the people enjoy the festive mood of the year 2024? If so, please type in your particulars for a wonderful experience in Somali?</p>
+    <form method="post" action="">
+        {%csrf_token%}
+        {{form.as_p}}
+        <input type="submit" value="Save">
+        
+    </form>
+    <a href="{% url 'next' %}">Next Page</a>
+</body>
+</html>
+
